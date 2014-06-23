@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <script src="../js/jquery-2.1.1.js"></script>
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/update.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/notifications.css">
+</head>
+
+<body>
+
+  <div class="container">
+  <div ng-app="updateTask">
+    <h4> Manager Case Application </h4>
+    <div id="tab" class="btn-group" style="margin-top:0px;" data-toggle="buttons-radio">
+      <a href="cases.html" class="btn btn-info" role="button"> Back</a>
+    </div>
+    <form name="submitForm" ng-controller="updateTaskCtrl" style="width:330px; margin: 0 auto;">
+      <label for="title" style="margin-top:4px;">Title:</label>
+      <input label="" ng-model="title" placeholder="Title" class="form-control"  id="title">
+      <label for="owner" style="margin-top:4px;">Owner:</label>
+      <input ng-model="owner" placeholder="Owner" class="form-control" id="owner">
+      <label for="desription">Description:</label>
+      <textarea rows="6" ng-model="description" class="form-control" placeholder="Description" id="description"></textarea>
+      <label for="male" style="margin-top:4px;">Status:</label>
+      <select class="form-control" id="status"  ng-model="status" ng-options="stat.value as stat.label for stat in statusList" value="{{stat.value}}"></select>
+      <div class="col-xs-12 text-right" style="margin-top:4px;">
+        <button class="btn btn-info" ng-click="update()"> Save </button>
+      </div>
+    </form>
+  </div>
+  </div>
+
+</body>
+</html>

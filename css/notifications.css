@@ -1,0 +1,122 @@
+body {
+  background: #EBEBEB;
+  height: 400px;
+  width: 360px;
+}
+
+.row{
+    margin-top:40px;
+    padding: 0 10px;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.panel-heading span {
+  margin-top: -20px;
+  font-size: 15px;
+}
+
+.btn {
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #6D6D6D;
+  border-color: #DFDFDF;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #B6B6B6;
+  border-color: #DFDFDF;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #6D6D6D;
+  border-color: #DFDFDF;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  color: #000000;
+  background-color: #B6B6B6;
+  border-color: #DFDFDF;
+}
+
+.btn-success {
+  color: #F8F8F8;
+  background-color: #0f9d58;
+  border-color: #DFDFDF;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+
+.panel-danger {
+  border-color: #DFDFDF;
+}
+.panel-danger > .panel-heading {
+  color: #F8F8F8;
+  background-color: #d84437;
+  border-color: #DFDFDF;
+}
+.panel-danger > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #DFDFDF;
+}
+.panel-danger > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #DFDFDF;
+}
+
+.panel-success {
+  border-color: #F8F8F8;
+}
+.panel-success > .panel-heading {
+  color: #F8F8F8;
+  background-color: #0f9d58;
+  border-color: #DFDFDF;
+}
+.panel-success> .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #DFDFDF;
+}
+.panel-success > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #DFDFDF;
+}
+
+.panel-warning {
+  border-color: #F8F8F8;
+}
+.panel-warning > .panel-heading {
+  color: #F8F8F8;
+  background-color: #f4b400;
+  border-color: #DFDFDF;
+}
+.panel-warning> .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #DFDFDF;
+}
+.panel-warning > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #DFDFDF;
+}
+
+#imgLoading {
+  height: 200px;
+  width: 200px;
+  margin-left: 80px;
+  margin-top: 40px;
+}

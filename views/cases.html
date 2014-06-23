@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../js/jquery-2.1.1.js"></script>
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/cases.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/notifications.css">
+</head>
+
+<body>
+  <div class="container">
+  <div ng-app="allTasks">
+      <h4> Manager Case Application </h4>
+      <div id="tab" class="btn-group" style="margin-top:16px; margin-bottom:16px;" data-toggle="buttons-radio">
+        <a href="cases.html" class="btn btn-info" role="button">Cases</a>
+        <a href="update.html" class="btn btn-default" role="button">Create New Cases</a>
+      </div>
+      <div id="tasks" ng-controller="TaskPanelCtrl">
+        <div ng-repeat="task in tasks">
+          <div class = "panel" style="margin-top:3px; margin-bottom:3px;">
+            <div class = "panel-danger" ng-class="{'panel-warning' : task.status == 'ACTIVE', 'panel-success' : task.status == 'CLOSED'}">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <span class="glyphicon" ng-class="{'glyphicon-ok' : task.status == 'CLOSED', 'glyphicon-fire' :
+                    task.status == 'EMERGENCY', 'glyphicon-paperclip' : task.status == 'ACTIVE'}" style="margin-right:4px;">
+                  </span>
+                  {{ task.title }}
+                </h3>
+                <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span>
+              </div>
+              <div class="panel-body panel-collapse collapse">
+                <div><strong>Owner:</strong><br> {{ task.owner }}<br></div>
+                <div><strong>ID:</strong><br> {{ task.id }} <br></div>
+                <div><strong>Description:</strong><br> {{ task.comments }}</div>
+                <div class="col-xs-12 text-right" style="margin-top:30px;">
+                  <div >
+                    <a href="update.html" class="btn btn-info" ng-click="update(task.id, task.title, task.owner, task.comments, task.status)" style:"margin-top:130px;"></span>Update</a>
+                    <a class="btn btn-success" ng-if="task.status != 'CLOSED'" ng-click="close(task.id, task.title, task.owner, task.comments)"></span> Close </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  <img id="imgLoading"src ="../img/page-loader.gif"/>
+</body>
+</html>
